@@ -111,12 +111,13 @@
 
   function handleCheck(e) {
     let inBetween = false;
-    
-    if (e.shiftKey  && this.checked) {
+
+    if (e.shiftKey && this.checked) {
+
       checkboxes.forEach(checkbox => {
         console.log(checkbox);
-        if (checkbox === this || checkbox === lastChecked) {
-          inBetween = !inBetween;
+        if (checkbox === lastChecked || checkbox === this) {
+          inBetween = !inBetween
         }
 
         if (inBetween) {
